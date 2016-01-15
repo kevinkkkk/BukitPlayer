@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">BukitPlayer</string>
+
+    <string name="drawer_open">Open menu</string>
+    <string name="drawer_close">Close menu</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="empty_vendors">No vendors!</string>
+    <string name="empty_bookings">No bookings!</string>
+
+    <string name="shared_vendor_name">sharedVendorName</string>
+    <string name="shared_vendor_pic">sharedVendorPic</string>
+    <string name="shared_vendor_star">sharedVendorStar</string>
+    <string name="shared_vendor_toolbar">sharedVendorToolbar</string>
+    <string name="shared_vendor_natural">sharedVendorNatural</string>
+    <string name="shared_book_action">shareBookAction</string>
+    <string name="shared_vendor_distance">shareVendorDistance</string>
+
+
+    <string name="menu_scanit">Scan the barcode</string>
+
+    <string name="error_on_staring">Error starring vendor from %s</string>
+    <string name="error_on_unstaring">Error unstarring vendor from %s</string>
+
+
+
+</resources>

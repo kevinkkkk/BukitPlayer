@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/vendorPic1"
+            android:layout_width="@dimen/booking_vendor_pic_width_height"
+            android:layout_height="@dimen/booking_vendor_pic_width_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/kevin"
+            android:layout_marginRight="@dimen/mail_item_padding_left_right"
+            />
+
+
+
+        <TextView
+            android:id="@+id/vendorName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/secondary_text"
+            tools:text="25. Apr."
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separatorLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"
+
+        android:layout_marginTop="8dp"
+
+        />
+
+    <TextView
+        android:id="@+id/information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available time(s)"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+
+    <View
+        android:id="@+id/separatorLine2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"
+
+        android:layout_marginTop="8dp"
+
+        />
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/contentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:paddingTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:drawableTop="@drawable/ic_all_done"
+        android:drawablePadding="20dp"
+        android:textColor="@color/secondary_text"
+        android:text="@string/empty_bookings"
+        android:textSize="16sp"
+        android:visibility="gone"
+
+        />
+
+    <include layout="@layout/view_loading"/>
+    <include layout="@layout/view_error"/>
+    <include layout="@layout/view_authentication_required"/>
+
+</LinearLayout>

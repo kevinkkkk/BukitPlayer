@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:weightSum="100"
+    android:paddingLeft="@dimen/menu_padding_left_right"
+    android:paddingRight="@dimen/menu_padding_left_right"
+    android:paddingTop="@dimen/menu_item_padding_top_bottom"
+    android:paddingBottom="@dimen/menu_item_padding_top_bottom"
+    android:background="?android:attr/selectableItemBackground"
+    >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/bookingTime"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="60"
+        android:maxLines="1"
+        android:layout_marginLeft="2dp"
+        android:gravity="center|center_vertical"
+        android:textColor="@android:color/white"
+        android:background="@color/alert_text"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="30"
+        android:layout_height="match_parent"
+        android:gravity="center|center_vertical"
+        android:id="@+id/tableId"
+        android:background="@color/accent_dark"
+        android:textSize="16sp"/>
+
+
+
+</LinearLayout>

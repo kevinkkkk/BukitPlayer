@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+  <color name="primary">#e18404</color>
+  <color name="primary_dark">#303F9F</color>
+  <color name="primary_medium">#7B86D0</color>
+  <color name="primary_light">#C5CAE9</color>
+  <color name="accent">#FFC107</color>
+  <color name="accent_dialog">#FF7F27</color>
+  <color name="primary_text">#212121</color>
+  <color name="secondary_text">#727272</color>
+  <color name="icons">#FFFFFF</color>
+  <color name="divider">#B6B6B6</color>
+  <color name="backtransparent">#e6646464</color>
+  <color name="quick">#ff1f3c</color>
+  <color name="quick_dark">#971a1b</color>
+
+  <color name="accent_dark">#FFA000</color>
+  <color name="accent_ripple">#F7F7F7</color>
+
+  <color name="alert_text">#723c6e</color>
+
+  <color name="red">#F44336</color>
+
+  <color name="white">#FFFFFF</color>
+  <color name="toolbar_drawer_color">@color/white</color>
+
+  <color name="light_grey">#DEDEDE</color>
+  <color name="star_deactivated">#D6D6D6</color>
+
+</resources>

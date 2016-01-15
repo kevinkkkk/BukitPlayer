@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/vendorPic1"
+        android:layout_width="@dimen/booking_vendor_pic_width_height"
+        android:layout_height="@dimen/booking_vendor_pic_width_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/kevin"
+        android:layout_marginRight="@dimen/mail_item_padding_left_right"
+        />
+
+
+
+    <TextView
+        android:id="@+id/vendorName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/secondary_text"
+        tools:text="25. Apr."
+        />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separatorLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"
+
+        android:layout_marginTop="8dp"
+
+        />
+
+    <TextView
+        android:id="@+id/waitingTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+
+    <View
+        android:id="@+id/separatorLine2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"
+
+        android:layout_marginTop="8dp"
+
+        />
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:paddingTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.melnykov.fab.FloatingActionButton
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/quickBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/countmein"
+
+        android:textColor="@color/white"
+        fab:fab_colorNormal="@color/quick"
+        fab:fab_colorPressed="@color/quick_dark"
+        fab:fab_colorRipple="@color/accent"
+        />
+
+    <com.melnykov.fab.FloatingActionButton
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/customBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="bottom|left"
+        android:src="@drawable/ic_schedule"
+
+        android:textColor="@color/white"
+        fab:fab_colorNormal="@color/accent"
+        fab:fab_colorPressed="@color/accent_dark"
+        fab:fab_colorRipple="@color/accent"
+        />
+
+</FrameLayout>
+
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:drawableTop="@drawable/ic_all_done"
+        android:drawablePadding="20dp"
+        android:textColor="@color/secondary_text"
+        android:text="@string/empty_bookings"
+        android:textSize="16sp"
+        android:visibility="gone"
+
+        />
+
+    <include layout="@layout/view_loading"/>
+    <include layout="@layout/view_error"/>
+    <include layout="@layout/view_authentication_required"/>
+
+</LinearLayout>
